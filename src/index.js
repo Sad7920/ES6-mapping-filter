@@ -1,17 +1,41 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import emojipedia from "./emojipedia";
+var numbers = [3, 56, 2, 48, 5];
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//Map -Create a new array by doing something with each item in an array.
+
+
+numbers.map(function (x){
+  return x * 2;
+});
+
+//Filter - Create a new array by keeping the items that return true.
+
+numbers.filter(function(num){
+  return num < 10;
+})
+
+//Reduce - Accumulate a value by doing something to each item in an array.
+
+numbers.reduce(function (accumulator, newNumber){
+  return accumulator + newNumber;
+})
+
+
+//Find - find the first item that matches from an array.
+
+numbers.find(function (num) {
+  return num > 10
+})
+
+//FindIndex - find the index of the first item that matches.
+
+var log = numbers.findIndex(function (num) {
+  return num > 10
+})
+
+//subString- scraps the value with the start and end number 
+
+emojipedia.map(function(obj) {
+  return obj.meaning.substring(0, 100);
+})
